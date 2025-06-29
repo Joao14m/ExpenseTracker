@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    background-color: #444746;
+    align-items: flex-start;
+    flex-wrap: wrap; /* allow content to wrap on smaller screens */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Side One */
+.side_one {
+    width: 250px; /* fixed width that's small enough for all screens */
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Adjust image and name */
+#thisPers {
+    display: block;
+    margin: 10px auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+#name {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    height: 80px;
+    width: 80px;
+}
+
+.nav-list li {
+    font-size: 30px;
+    color: white;
+    padding: 10px 0 10px 10px;
+}
+
+/* Side Two */
+.side_two {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Layout Rows */
+.miniContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    height: 250px;
+    flex-wrap: wrap;
+}
+
+.categories,
+.recentExpenses {
+    border: 1px solid black;
+    flex: 1 1 48%;
+    box-sizing: border-box;
+}
+
+/* Second Row */
+.secondMiniContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    height: auto;
+}
+
+.quickAccess,
+.report {
+    border: 1px solid black;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Optional: Make images/icons shrink on very small screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side_two {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .miniContainer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .categories,
+    .recentExpenses {
+        width: 100%;
+    }
+}

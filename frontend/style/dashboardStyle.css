@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "Roboto", sans-serif;
 }
 
+/* Margin is pushing each other away from
+   Padding is one element taking more of its space 
+   Padding Vertical is top and bottom
+   Padding Horizontal is right and left edges*/
+
 .container{
+    /* padding: vertical horizontal */
+    padding: 20px 10px;
+    padding-right: 50px;
     height: 100vh;
     display:flex;
     background-color: #444746;
@@ -14,6 +27,8 @@ body{
 .side_one{
     /* background-color: rgb(23, 121, 63); */
     /* background-color: #444746; */
+    display: flex;
+    flex-direction: column;
     width: 20%;
     height: 690px;
 }
@@ -72,39 +87,130 @@ li:hover{
 } */
 
 /* Side Two */
+/* Don't use px for width, use % */
+/* flex: 1 means take the rest of the space */
 
 .side_two{
     /* width: 80%; */
+    /* min-width: 80%; */
+    flex: 1;
+    height: 80%;
     background-color: aquamarine;
-    border-style: solid;
-    margin-left: 15px; 
+    /* border-style: solid; */
+    /* margin-left: 15px; 
     margin-top: 20px;
-    margin-bottom: 20px;
-    height: 650px;
-    width: 1190px; 
+    margin-bottom: 20px; */
+    /* height: 650px; */
+    /* width: 1190px;   */
+    padding: 30px 10px;
+    /* padding-top: 40px; */
+    border-radius: 10px;
 }
 
+/* The default for height is 100px */
 .miniContainer{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-around;
     gap: 10px;
-    margin-bottom: 10px;
-    border-style: solid;
+    /* margin-bottom: 10px;
+    margin-top: 20px; */
+    height: 200px; 
+    /* border-style: solid; */
 }
+
+.box{
+    min-width: 30%;
+    border-radius: 10px;
+    background-color:#444746;
+    h4{
+        margin: 0;
+        /* padding: vertical horizontal */
+        padding: 8px 10px;
+        border-bottom: 1px solid white;
+        color: white;
+        font-size: 17px;
+        font-weight: 700;
+    }
+}
+
+/* Don't use width on everything
+   Use when you really needed to  */
 
 .categories{ 
     border-style: solid;
+    /* width: 47.9%; */
 }
 
 .recentExpenses{
     border-style: solid;
+    /* width: 47.9%; */
+}
+
+.secondMiniContainer{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    padding: 0px 5px;
+    gap: 10px;
+    margin-top: 10px;
+    /* align-items: center; */
+    /* margin-top: 20px; */
+    /* height: 340px; */
+    /* border-style: solid; */
 }
 
 .quickAccess{
     border-style: solid;
-    margin-bottom: 10px;
+    /* gap: 30px; */
+    /* margin-bottom: 10px;
+    margin-top: 15px; */
+    height: 135px;
+    /* height: 150%; */
+    /* width: 1150px; */
+    width: 100%;
 }
 
 .report{
     border-style: solid;
+    flex-grow: 1;
+    height: 200px;
+    /* width: 1150px; */
+    width: 100%;
+    /* flex-grow: 1; */
+}
+
+.list_vertical{
+    color: white;
+    padding: 8px;
+    margin: 0; 
+    /* li{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        margin: 0; 
+        padding: 0;     
+        .list_left{
+            display: flex;
+            gap: 4px;
+        }
+    } */
+}
+
+.list_vertical li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0; 
+    padding: 0; 
+}
+ 
+.list_vertical li .list_left{
+    display: flex;
+    gap: 4px;
+}
+
+.list_vertical li .list_left_expenses{
+    display: flex;
+    gap: 100px;
 }
