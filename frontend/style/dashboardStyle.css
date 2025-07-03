@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     overflow-y: hidden;
     font-family: "Roboto", sans-serif;
+    min-height: 100vh;
 }
 
 /* Margin is pushing each other away from
@@ -18,8 +20,108 @@ body{
     padding-right: 50px;
     height: 100vh;
     display:flex;
-    background-color: #444746;
+    /* background-color: #444746; */
     align-items: center;
+}
+
+/* NavBar/Sidebar */
+
+.sidebar{
+    width: 270px;
+    /* maybe i have to take this out */
+    position: fixed;
+    /* this too (i lied, i might just have to add margin-bottom: 50px) */
+    margin: 16px;
+    border-radius: 16px;
+    background: #151A2D;
+    height: calc(100vh - 32px);    
+    transition: 0.4s ease;
+}
+
+.sidebar.collapsed {
+    width: 85px;
+}
+
+.sidebar-header{
+    position: relative;
+    display: flex;
+    padding: 25px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-header .header-logo img{
+    width: 46px;
+    height: 46px;
+    display: block;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.sidebar-header .toggler {
+    position: absolute;
+    right: 20px;
+    height: 35px;
+    width: 35px;
+    border: none;
+    color: #151A2D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #fff;
+    transition: 0.4s ease;
+}
+
+.sidebar-header .toggler:hover{
+    background: #dde4fb;
+}
+
+.sidebar-header .toggler span{
+    font-size: 1.75rem;
+}
+
+.sidebar-nav .nav-list{
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    padding: 0 15px;
+    flex-direction: column;
+    transform: translateY(15px);
+}
+
+.sidebar-nav .nav-link{
+    color: #fff;
+    display: flex;
+    gap: 12px;
+    border-radius: 8px;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+.sidebar-nav .nav-link:hover{
+    color: #151A2D;
+    background: #fff;
+}
+
+.sidebar-nav .nav-link .nav-label{
+    transition: opacity 0.4s ease;
+}
+
+.sidebar.collapsed .sidebar-nav .nav-link .nav-label{
+    opacity: 0;
+    /* pointer-events controls whether or not an element can respond 
+    to mouse/touch events like click, hover, or pointermove */
+    pointer-events: none;
+}
+
+.sidebar-nav .secondary-nav{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
 }
 
 /* Side One */
@@ -33,6 +135,7 @@ body{
     height: 690px;
 }
 
+/*
 #thisPers{ 
     margin-top: 10px;
     margin-left: 90px;

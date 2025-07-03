@@ -4,11 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="/frontend/style/dashboardStyle.css">
 </head>
 <body>
+<!--
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <a href="#" class="header-logo">
+                <img src="/frontend/utilities/logo.png">
+            </a>
+            <button class="toggler">
+                <span class="material-symbols-rounder">chevron_left</span>
+            </button>
+        </header>
+    </aside>
+-->
+    
     <div class="container">
-        <div class="side_one">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <a href="#" class="header-logo">
+                    <img src="/frontend/utilities/logo.png">
+                </a>
+                <button class="toggler sidebar-toggler">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+            </header>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-list primary-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            <span class="nav-label">Expenses</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="material-symbols-outlined">analytics</span>
+                            <span class="nav-label">Report</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav-list secondary-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="material-symbols-outlined">account_circle</span>
+                            <span class="nav-label">Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="material-symbols-outlined">logout</span>
+                            <span class="nav-label">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- <div class="side_one">
             <img id="logo" src="/frontend/utilities/logo.png">
             <img id="thisPers" src="/frontend/utilities/thisPerson.jpeg">
             <p id="name">John Doe</p>
@@ -17,7 +80,7 @@
                 <li id="expenses"> <span class="icon">💵</span>Expenses</li>
                 <li id="reports"><span class="icon">📶</span>Reports</li>
             </ul>
-        </div>
+        </div> --> 
         <div class="side_two">
             <div class="miniContainer">
                 <div class="categories box">
@@ -58,5 +121,7 @@
             </div>
         </div>
     </div>
+
+    <script src="/frontend/scripts/dashboard.js"></script>
 </body>
 </html>
